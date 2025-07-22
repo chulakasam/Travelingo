@@ -241,3 +241,12 @@
   font-size: 12px;
   color: #64748b;
 }
+/* Content Grid */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 24px;
+  padding: 24px 32px;
+  overflow-y: auto;
+  flex: 1;
+}
