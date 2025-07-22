@@ -3,6 +3,7 @@ import './App.css'
 import Sidebar from "./components/Sidebar.tsx";
 import {useState} from "react";
 import MainContent from "./components/MainContent.tsx";
+import FeaturedCards from "./components/FeaturedCards.tsx";
 
 function App() {
     const [activeTab, setActiveTab] = useState('Dashboard');
@@ -19,7 +20,14 @@ function App() {
       <div className="app">
           <Sidebar sidebarItems={sidebarItems} activeTab={activeTab} setActiveTab={setActiveTab} />
           <MainContent/>
-      </div>
+              <div className="content-grid">
+                <div className="left-column">
+                  <div className="main-content-container">
+                      <FeaturedCards />
+                  </div>
+                </div>
+              </div>
+          </div>
   )
 }
 
