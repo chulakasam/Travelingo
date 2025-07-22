@@ -8,6 +8,7 @@ import BestDestination from "./components/BestDestination.tsx";
 import CalendarWidget from "./components/CalendarWidget.tsx";
 import ScheduleWidget from "./components/ScheduleWidget.tsx";
 import ExploreCard from "./components/ExploreCard.tsx";
+import HeaderBar from "./components/HeaderBar.tsx";
 
 function App() {
     const [activeTab, setActiveTab] = useState('Dashboard');
@@ -83,14 +84,16 @@ function App() {
   return (
       <div className="app">
           <Sidebar sidebarItems={sidebarItems} activeTab={activeTab} setActiveTab={setActiveTab} />
-          <MainContent/>
+
+          <div className="main-content">
+              <HeaderBar />
               <div className="content-grid">
-                <div className="left-column">
-                  <div className="main-content-container">
-                      <FeaturedCards />
-                      <BestDestination destinations={destinations} />
+                  <div className="left-column">
+                      <div className="main-content-container">
+                          <FeaturedCards />
+                          <BestDestination destinations={destinations} />
+                      </div>
                   </div>
-                </div>
                   <div className="right-column">
                       <CalendarWidget currentMonth={currentMonth} calendarDays={calendarDays} />
                       <ScheduleWidget scheduleItems={scheduleItems} />
@@ -98,6 +101,7 @@ function App() {
                   </div>
               </div>
           </div>
+      </div>
   )
 }
 
