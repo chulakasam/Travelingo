@@ -91,6 +91,15 @@ export default function MainContent(){
                     </div>
                 </div>
 
+                {/* Promo Card */}
+                <div className="promo-card">
+                    <div className="promo-avatar">
+                        <span className="promo-emoji">🧑‍🦰</span>
+                    </div>
+                    <div className="promo-title">Let's Explore the beauty</div>
+                    <div className="promo-subtitle">Get special offers & news</div>
+                    <button className="promo-btn">Join Now</button>
+                </div>
 
             </div>
         </main>
