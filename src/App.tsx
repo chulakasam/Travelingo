@@ -7,6 +7,7 @@ import FeaturedCards from "./components/FeaturedCards.tsx";
 import BestDestination from "./components/BestDestination.tsx";
 import CalendarWidget from "./components/CalendarWidget.tsx";
 import ScheduleWidget from "./components/ScheduleWidget.tsx";
+import ExploreCard from "./components/ExploreCard.tsx";
 
 function App() {
     const [activeTab, setActiveTab] = useState('Dashboard');
@@ -93,6 +94,7 @@ function App() {
                   <div className="right-column">
                       <CalendarWidget currentMonth={currentMonth} calendarDays={calendarDays} />
                       <ScheduleWidget scheduleItems={scheduleItems} />
+                      <ExploreCard />
                   </div>
               </div>
           </div>
