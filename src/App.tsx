@@ -4,6 +4,7 @@ import Sidebar from "./components/Sidebar.tsx";
 import {useState} from "react";
 import MainContent from "./components/MainContent.tsx";
 import FeaturedCards from "./components/FeaturedCards.tsx";
+import BestDestination from "./components/BestDestination.tsx";
 
 function App() {
     const [activeTab, setActiveTab] = useState('Dashboard');
@@ -15,6 +16,35 @@ function App() {
         { name: 'Transaction', icon: CreditCard },
         { name: 'Setting', icon: Settings },
     ];
+    const destinations = [
+        {
+            id: 1,
+            name: 'Green wood forest',
+            location: 'Mangaung',
+            price: 999,
+            rating: 4.8,
+            image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200&q=80',
+            category: 'Forest'
+        },
+        {
+            id: 2,
+            name: 'Green forest Camp',
+            location: 'Mangaung',
+            price: 999,
+            rating: 4.8,
+            image: 'https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200&q=80',
+            category: 'Camping'
+        },
+        {
+            id: 3,
+            name: 'Desert Festival',
+            location: 'Gujarat',
+            price: 999,
+            rating: 4.8,
+            image: 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200&q=80',
+            category: 'Desert'
+        }
+    ];
 
   return (
       <div className="app">
@@ -24,6 +54,7 @@ function App() {
                 <div className="left-column">
                   <div className="main-content-container">
                       <FeaturedCards />
+                      <BestDestination destinations={destinations} />
                   </div>
                 </div>
               </div>

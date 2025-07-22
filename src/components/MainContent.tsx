@@ -44,6 +44,19 @@ export default function MainContent(){
                     </div>
                 ))}
             </div>
+            {/* Best Destination & Promo Card part */}
+            <div className="destination-promo">
+                {/* best destination part */}
+                <div className="best-destination">
+                    <div className="best-destination-header">
+                        <div className="best-destination-title">Best Destination <span role="img" aria-label="rainbow">🌈</span></div>
+                        <button className="filter-btn">Filters</button>
+                    </div>
+                    <div className="destination-count">100 Destination found</div>
+
+                </div>
+
+            </div>
         </main>
     )
 }
