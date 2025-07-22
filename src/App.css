@@ -673,3 +673,49 @@
   background: #059669;
 }
 
+/* Responsive */
+@media (max-width: 1200px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    padding: 16px;
+    overflow-x: auto;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  .discount-card {
+    display: none;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
+
+  .featured-cards {
+    grid-template-columns: 1fr;
+  }
+}
