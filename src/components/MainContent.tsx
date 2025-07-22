@@ -32,7 +32,7 @@ export default function MainContent(){
                     <span className="notification-icon">🔔</span>
                 </div>
             </div>
-            {/* featured card part*/}
+            {/* featured card part loading*/}
             <div className="featured-cards">
                 {featuredTrips.map((trip, idx) => (
                     <div key={idx} className="featured-card">
@@ -44,7 +44,6 @@ export default function MainContent(){
                     </div>
                 ))}
             </div>
-
         </main>
     )
 }
