@@ -2,6 +2,7 @@ import { Home, Ticket, Heart, MessageCircle, CreditCard, Settings } from 'lucide
 import './App.css'
 import Sidebar from "./components/Sidebar.tsx";
 import {useState} from "react";
+import MainContent from "./components/MainContent.tsx";
 
 function App() {
     const [activeTab, setActiveTab] = useState('Dashboard');
@@ -17,7 +18,7 @@ function App() {
   return (
       <div className="app">
           <Sidebar sidebarItems={sidebarItems} activeTab={activeTab} setActiveTab={setActiveTab} />
-
+          <MainContent/>
       </div>
   )
 }
