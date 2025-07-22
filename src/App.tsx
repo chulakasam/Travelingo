@@ -6,6 +6,7 @@ import MainContent from "./components/MainContent.tsx";
 import FeaturedCards from "./components/FeaturedCards.tsx";
 import BestDestination from "./components/BestDestination.tsx";
 import CalendarWidget from "./components/CalendarWidget.tsx";
+import ScheduleWidget from "./components/ScheduleWidget.tsx";
 
 function App() {
     const [activeTab, setActiveTab] = useState('Dashboard');
@@ -55,6 +56,29 @@ function App() {
         { day: 25 }, { day: 26 }, { day: 27 }, { day: 28 }, { day: 29 }, { day: 30 }, { day: 31 }
     ];
 
+    const scheduleItems = [
+        {
+            id: 1,
+            title: 'Crocked Forest',
+            dateRange: '20 may - 23 may',
+            image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&h=100&q=80',
+            participants: 12
+        },
+        {
+            id: 2,
+            title: 'Fern Waterfall',
+            dateRange: '25 may - 31 may',
+            image: 'https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&h=100&q=80',
+            participants: 10
+        },
+        {
+            id: 3,
+            title: 'Night Camping',
+            dateRange: '26 may - 29 may',
+            image: 'https://images.unsplash.com/photo-1504851149312-7a075b496cc7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&h=100&q=80',
+            participants: 15
+        }
+    ];
   return (
       <div className="app">
           <Sidebar sidebarItems={sidebarItems} activeTab={activeTab} setActiveTab={setActiveTab} />
@@ -68,6 +92,7 @@ function App() {
                 </div>
                   <div className="right-column">
                       <CalendarWidget currentMonth={currentMonth} calendarDays={calendarDays} />
+                      <ScheduleWidget scheduleItems={scheduleItems} />
                   </div>
               </div>
           </div>
