@@ -19,6 +19,29 @@ export default function MainContent(){
             image: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=400&q=80',
         },
     ];
+    const bestDestinations = [
+        {
+            title: 'Green wood forest',
+            location: 'Telangana',
+            rating: 4.8,
+            price: 999,
+            image: 'https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=100&q=80',
+        },
+        {
+            title: 'Green forest Camp',
+            location: 'Channai',
+            rating: 4.8,
+            price: 999,
+            image: 'https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=100&q=80',
+        },
+        {
+            title: 'Desert Festival',
+            location: 'Gujarat',
+            rating: 4.8,
+            price: 999,
+            image: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=100&q=80',
+        },
+    ];
     return (
         <main className="main-content">
             {/* welcome & search part */}
@@ -53,8 +76,21 @@ export default function MainContent(){
                         <button className="filter-btn">Filters</button>
                     </div>
                     <div className="destination-count">100 Destination found</div>
-
+                    <div className="destination-count">100 Destination found</div>
+                    <div>
+                        {bestDestinations.map((dest, idx) => (
+                            <div key={idx} className="destination-item">
+                                <img src={dest.image} alt={dest.title} className="destination-image" />
+                                <div className="destination-info">
+                                    <div className="destination-title">{dest.title}</div>
+                                    <div className="destination-location">📍 {dest.location} &nbsp; ⭐ {dest.rating}</div>
+                                </div>
+                                <div className="destination-price">₹{dest.price}<span className="destination-night">/night</span></div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
+
 
             </div>
         </main>
